@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/javascript.js"></script>
+    <title>Exercise 4</title>
+</head>
+<body id="body1">
+    <form class="form-group form-row form1" action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="GET" autocomplete="off">
+
+        <label>Full Name:<span class="msg"></span><input  class="form-control fullName" type="text" name="fullName" required></label>
+        
+        <label> Password:<span class="msg"></span><input class="form-control pass" type="password" name="pass" required></label> <!--Minimum 7 characters, at least one number-->
+        <label>Email:<input class="form-control" placeholder="name@example.com" type="email" name="mail" required></label>
+        <label>Url:<input class="form-control" placeholder="https://URL" type="url" name="website" required></label>
+        <label>Pelephone:<span class="msg"></span><input class="form-control phone" type="tel" name="phone" ></label><!--9 or 10 digits-->
+        <label>Coffee:<input class="form-control" type="number" name="coffee" required></label>
+        <label>Temprature:<input class="form-range" type="range" name="temper"></label>
+        <label>Address:<input class="form-control" type="address" name="address" required></label>
+
+        <span class="interests" required>Interests:
+            <label>Developer<input class="form-check-input checkBox " type="checkbox" name="interests[]" value="developer"></label>
+            <label>Travel<input class="form-check-input checkBox" type="checkbox" name="interests[]" value="travel"></label>
+            <label>Yoga<input class="form-check-input checkBox" type="checkbox" name="interests[]" value="yoga"></label>
+            <label>Swimming<input class="form-check-input checkBox" type="checkbox" name="interests[]" value="swimming"></label>
+            <label>Music<input class="form-check-input checkBox" type="checkbox" name="interests[]" value="music"></label>
+            <label>Sports<input class="form-check-input checkBox" type="checkbox" name="interests[]" value="sports"></label>
+        </span>
+
+        <span class="gender">Gender:
+            <label>Male<input class="form-check-input radio" type="radio" name="gender" value="male" required></label>
+            <label>Female<input class="form-check-input radio" type="radio" name="gender" value="female" required></label>
+        </span>
+
+        <label class="age">Age:
+            <select class="form-control" name="age" required>
+                <option selected disabled>Choose...</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+            </select>
+        </label>
+
+        <input class="send btn btn-outline-primary" type="submit" value="send">
+    </form>
+</body>
+
+</html>

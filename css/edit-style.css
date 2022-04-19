@@ -1,0 +1,182 @@
+/************* second page *************/
+body{
+    position: relative;
+    max-height: 600px;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+}
+form{
+    position: relative;
+    border: 1px solid #308695;
+    min-width: 400px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+    margin: 20px auto;
+}
+.wrapper{
+    position: relative;
+    height: 450px;
+    width: 450px;
+    background: #fff;
+    margin: 15px auto;
+    padding: 50px;
+}
+.wrapper .userNameDiv, .phoneNumberDiv, .msgDiv{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 70px;
+}
+.wrapper .userNameDiv input ,.phoneNumberDiv input,.msgDiv textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #d4cfc9;
+    outline: none;
+} 
+.wrapper .userNameDiv label,.phoneNumberDiv label,.msgDiv label{
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    color:#537b8a;
+    font-size: 16px;
+}
+.userNameDiv input:focus ~ label ,.phoneNumberDiv input:focus ~ label,.msgDiv textarea:focus ~ label,
+.userNameDiv input:valid ~ label ,.phoneNumberDiv input:valid ~ label,.msgDiv textarea:valid ~ label {
+    transform: translateY(-30px);
+}
+.wrapper .userNameDiv .line,
+.wrapper .phoneNumberDiv .line,
+.wrapper .msgDiv .line{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+.userNameDiv .line:before,
+.phoneNumberDiv .line:before,
+ .msgDiv .line:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(225deg, #b87421 0%, #308695 50%, #b87421 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.userNameDiv input:focus ~ .line:before,
+.phoneNumberDiv input:focus ~ .line:before,
+.msgDiv textarea:focus ~ .line:before,
+.userNameDiv input:valid ~ .line:before,
+.phoneNumberDiv input:valid ~ .line:before,
+.msgDiv textarea:valid ~ .line:before {
+    transform: scaleX(1);
+}
+
+.send{
+    position: absolute;
+    background: #308695;
+    border: 1px solid #308695;
+    color: white;
+    border-radius: 3px;
+    height: 40px;
+    max-width: 250px;
+    width: 100%;
+    margin: -20px 30%;
+}
+.send:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.4) 0 7px 7px -3px, #D6D6E7 0 -3px 0 -3px;
+  transform: translateY(-2px);
+}
+
+.send:active {
+  box-shadow: #D6D6E7 0 3px 7px -3px;
+  transform: translateY(2px);
+}
+
+/* design for smartphones */
+@media screen and (max-width: 480px) {
+    body{
+        background: white;
+        max-width: 480px;
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+    }
+    form{
+        background: #fff;
+        position: relative;
+        margin: 20px auto;
+        max-width: 440px;
+        width: 100%;
+        height: auto;   
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+        background: #308695;
+    }
+    .wrapper{
+        position: relative;
+        height:600px;
+        width: 100%;
+        background: #308695;
+    }
+    .wrapper .userNameDiv input ,.phoneNumberDiv input,.msgDiv textarea{
+        width: 100%;
+        background: #308695;
+        color: #E6E6FA;
+        font-size: 20px;
+    }
+    .wrapper .userNameDiv label,.phoneNumberDiv label,.msgDiv label{
+        color:#fff;
+        font-size: 20px;
+    }
+    .userNameDiv .line:before,
+    .phoneNumberDiv .line:before,
+    .msgDiv .line:before{
+        background: #b87421;
+    }
+    .send{
+        position: relative;
+        margin-top: 40px;
+        background: #fff;
+        border: 1px solid #fff;
+        color: #b87421;
+        font-weight: bold;
+        border-radius: 3px;
+        max-width: 250px;
+        width: 100%;
+        margin: -20px 20%;
+    } 
+}
+@media screen and (max-width: 250px) {
+    body{
+        overflow-x: hidden;
+    }
+    .wrapper .userNameDiv label,.phoneNumberDiv label,.msgDiv label{
+        font-size: 24px;
+        bottom: 20px;
+        left: 5px;
+    }
+    .wrapper{
+        height: 600px;
+    }
+    .send{
+        font-size: 24px;
+    }
+}
+
+#edit_serverSide{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#edit_serverSide h1{
+    color: #537b8a;
+}
+.number{
+    color: red;
+}
